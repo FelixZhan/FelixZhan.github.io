@@ -34,15 +34,83 @@
             <p>
               Research Impact: 2 grants as Principal Applicant ($268,640), 5
               pending grants as Principal Applicant ($769,400), 18 peer-reviewed
-              publications, 350 citations, Google Scholar H-Index of 10
+              publications, 350 citations, Google Scholar H-Index of 11
             </p>
           </div>
         </section>
 
         <section class="cv-section">
-          <div class="section-title">Research Interests</div>
-          <div class="pill-row">
-            <span class="pill">Trustworthy AI and Health</span>
+          <div class="section-title">Research Summary</div>
+          <div class="info-grid">
+            <div class="info-card">
+              <h3>H-Index</h3>
+              <p class="mono">11</p>
+            </div>
+            <div class="info-card">
+              <h3>Areas</h3>
+              <ul class="simple-list">
+                <li>Computational Neuroscience</li>
+                <li>Behavioral Psychiatry</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <h3>Affiliations</h3>
+              <ul class="simple-list">
+                <li>Stanford University</li>
+                <li>University of Cincinnati</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="cv-section">
+          <div class="section-title">Current Work</div>
+          <div class="card-list">
+            <button
+              class="cv-card research-card"
+              type="button"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              style="--delay: 60ms"
+              data-title="AI for cognition"
+              data-browse="Add a short overview here."
+              data-neutral="Add a mid-level overview here."
+              data-deep="Add technical detail here."
+            >
+              <div class="card-logo">COG</div>
+              <div class="card-body">
+                <div class="card-row">
+                  <span class="card-company">AI for cognition</span>
+                </div>
+                <p class="card-description">
+                  Predicting behavior and major psychiatric conditions with
+                  small sets of features.
+                </p>
+              </div>
+            </button>
+
+            <button
+              class="cv-card research-card"
+              type="button"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              style="--delay: 120ms"
+              data-title="AI for the body"
+              data-browse="Add a short overview here."
+              data-neutral="Add a mid-level overview here."
+              data-deep="Add technical detail here."
+            >
+              <div class="card-logo">BODY</div>
+              <div class="card-body">
+                <div class="card-row">
+                  <span class="card-company">AI for the body</span>
+                </div>
+                <p class="card-description">
+                  Using AI to improve understandings of eating disorders and
+                  obesity.
+                </p>
+              </div>
+            </button>
           </div>
         </section>
 
@@ -230,8 +298,8 @@
               <li>
                 S. Bari, ., F. Zhan, ., H. Breiter. "Predicting depressive
                 symptoms, sub-types and severity levels with machine learning
-                using computational cognition and contextual variables." npj
-                Artificial Intelligence (under review), September 2025.
+                using computational cognition and contextual variables." npj Artificial Intelligence (under review),
+                September 2025.
               </li>
               <li>
                 N. Vike, ., F. Zhan, ., H. Breiter. "AI-based Judgment variables
@@ -285,7 +353,73 @@
             </ul>
           </div>
         </section>
+
+        <details class="citations">
+          <summary>See citations</summary>
+          <div class="citations-content">
+            <p>Add citations here.</p>
+          </div>
+        </details>
       </main>
     </div>
+
+    <div class="modal-overlay" id="researchModalOverlay" aria-hidden="true">
+      <div
+        class="modal modal--research"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="researchModalTitle"
+      >
+        <div class="modal-top">
+          <div class="modal-toggle" role="tablist" aria-label="Detail level">
+            <div class="toggle-labels">
+              <span>Just browsing</span>
+              <span></span>
+              <span>Into the weeds!</span>
+            </div>
+            <div class="toggle-track">
+              <button
+                class="toggle-btn is-active"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                data-level="browse"
+                aria-label="Just browsing"
+              >
+                <span class="toggle-dot" aria-hidden="true"></span>
+              </button>
+              <button
+                class="toggle-btn"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-level="neutral"
+                aria-label="Balanced"
+              >
+                <span class="toggle-dot" aria-hidden="true"></span>
+              </button>
+              <button
+                class="toggle-btn"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-level="deep"
+                aria-label="Into the weeds!"
+              >
+                <span class="toggle-dot" aria-hidden="true"></span>
+              </button>
+            </div>
+            <p class="toggle-hint">Click a dot to switch detail level.</p>
+          </div>
+        </div>
+        <div class="modal-header">
+          <h2 id="researchModalTitle"></h2>
+          <p class="modal-subtitle" id="researchModalSubtitle"></p>
+        </div>
+        <div class="modal-content" id="researchModalContent"></div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
